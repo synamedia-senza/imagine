@@ -1,0 +1,110 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2);
+}
+
+body {
+  font-family: Montserrat;
+  font-size: 18pt;
+  background-color: white;
+  text-align: center;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.icon {
+  background: white;
+  border: 0px;
+  padding: 0px;
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+}
+
+.tv {
+  width: 1920px;
+  height: 1920px;
+  overflow: hidden;
+  position: absolute;
+}
+
+#image {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0px;
+  left: 0px;
+}
+
+#qrcode {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 810px;
+  left: 50px;
+  border: 0.5rem solid white;
+}
+
+#request {
+  position: absolute;
+  text-align: center;
+  top: 500px;
+  left: 0px;
+  width: 100%;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 60pt;
+  color: white;
+  opacity: 75%;
+}
+
+#info {
+  padding: 18px;
+  color: #777;
+}
+
+#final {
+  color: black;
+  font-weight: bold;
+}
+
+#interim {
+  color: gray;
+  font-weight: bold;
+}
+
+#results {
+  color: white;
+  font-weight: bold;
+
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes pulse {
+  0% { 
+    opacity: 0.85;
+  }
+  50% { 
+    opacity: 0.45;
+  }
+  100% { 
+    opacity: 0.85;
+  }
+}
+
+@keyframes final {
+  0% { 
+    opacity: 0.75;
+  }
+  33% { 
+    opacity: 1.0;
+  }
+  66% { 
+    opacity: 1.0;
+  }
+  100% { 
+    opacity: 0.0;
+  }
+}
+
