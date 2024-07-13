@@ -5,7 +5,6 @@ socket.emit('hello', '');
 socket.on('update', (message) => {
   interim.innerHTML = message.interim;
   final.innerHTML = message.final;
-  results.innerHTML = message.results;
 });
 
 const tapTheMic = "Tap the mic to listen.";
@@ -18,19 +17,17 @@ showInfo(tapTheMic);
 
 let recognition = new webkitSpeechRecognition();
 let recognizing = false;
+
 recognition.lang = 'en-US';
 recognition.continuous = true;
 recognition.interimResults = true;
-
 recognition.onstart = () => {
   recognizing = true;
   showInfo(whatDoYouWant);
 };
-
 recognition.onend = () => {
   recognizing = false;
 };
-
 recognition.onresult = (event) => {
   for (let i = event.resultIndex; i < event.results.length; ++i) {
     let value = event.results[i][0].transcript;
