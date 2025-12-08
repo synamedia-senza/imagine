@@ -34,6 +34,8 @@ socket.on('update', (message) => {
     request.style.animationDuration = "2.0s";
     request.style.animationIterationCount = "infinite";
     request.style.animationName = "pulse";
+  } else if (message.redirect && message.redirect.startsWith("https")) {
+    window.location.href = message.redirect;
   } else if (message.src) {
     image.src = message.src;
     request.style.animationDuration = "7.0s";
