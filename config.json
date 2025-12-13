@@ -1,3 +1,9 @@
 {
-    "OpenAIApiKey": "your-openai-api-key",
+  "OpenAIApiKey": "",
+  "S3Bucket": "",
+  "S3Path": "",
+  "S3Region": "us-east-1",
+  "S3AccessKeyId": "",
+  "S3SecretAccessKey": "",
+  "BaseUrl": "https://mydomain.com" 
 }

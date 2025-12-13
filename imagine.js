@@ -88,11 +88,12 @@ io.sockets.on('connection', (socket) => {
     state.redirect = await generateApp(message.final);
     if (state.redirect) {
       state.final = "";
-      console.log(state);
     } else {
       state.final = "error";
     }
     io.sockets.emit('update', state);
+    state.final = "";
+    state.redirect = "";
   });
 });
 
