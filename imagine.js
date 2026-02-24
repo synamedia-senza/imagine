@@ -57,12 +57,12 @@ async function generateApp(prompt) {
   }
 }
 
-// (async () => {
-//   const prompt = "a simulated command line user interface from the movie War Games, where the user only needs to hit the enter key for the simulated input/output messages to be displayed";
-//   console.log("Prompt:", prompt);
-//   const url = await generateApp(prompt);
-//   console.log("App URL:", url);
-// })();
+(async () => {
+  const prompt = "Make me an app that explains the Kannada script used in Karnataka assume that I don't have the fonts installed and use Google fonts to get the correct characters.";
+  console.log("Prompt:", prompt);
+  const url = await generateApp(prompt);
+  console.log("App URL:", url);
+})();
 
 io.sockets.on('initialload', function (socket) {  
 	socket.emit('update', state);
@@ -87,6 +87,7 @@ io.sockets.on('connection', (socket) => {
 
     state.redirect = await generateApp(message.final);
     if (state.redirect) {
+      console.log("URL:", state.redirect);
       state.final = "";
     } else {
       state.final = "error";
